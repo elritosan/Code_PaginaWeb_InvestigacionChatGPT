@@ -74,3 +74,25 @@ body, html {
   width: auto;
   max-width: 100%; /* Asegura que no se desborde */
 }
+
+
+/* Sección de presentación del equipo */
+.equipo-section {
+  background: linear-gradient(135deg, #e0f6e9 0%, #c3f1da 100%);
+}
+
+.equipo-box {
+  background-color: #2e7d32;
+  color: #ffffff;
+  max-width: 800px;
+}
+
+.equipo-box h2 {
+  font-weight: bold;
+}
+
+.equipo-list .list-group-item {
+  background-color: #ffffff;
+  color: #2e7d32;
+  border-left: 5px solid #66bb6a;
+}
