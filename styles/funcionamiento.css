@@ -1,0 +1,255 @@
+/* Reseteo de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Altura completa para que el footer se mantenga abajo */
+html, body {
+  height: 100%;
+}
+
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #d4edda; /* Fondo verde claro */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor principal que crece para empujar el footer */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  flex: 1;
+  margin: auto;
+}
+
+/* ENCABEZADO */
+.header {
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* LOGO */
+.chatgpt-logo {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  max-width: 100%;
+}
+
+/* SECCIÓN DE FUNCIONALIDADES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* BLOQUE DE CÓDIGO */
+.code-preview {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1em;
+  overflow: auto;
+}
+
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* BOTÓN REGRESAR */
+.btn-regresar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color:  #28a745; /* Verde fuerte */
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.btn-regresar:hover {
+  background-color:rgb(51, 230, 92);
+  transform: scale(1.05);
+}
+
+
+/* FOOTER */
+.footer-custom {
+  background-color: #28a745; /* Verde tipo Bootstrap */
+  color: white;
+  padding: 20px 150px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.feature h2:hover {
+  color: green; /* Color vibrante de hover */
+}
+
+/* Animación de aparición de las funcionalidades */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Desvanecimiento en hover de las tarjetas de funcionalidades */
+.feature {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0.9; /* Desvanecimiento suave */
+}
+
+.arrow-down {
+  text-align: center;
+  font-size: 5rem; /* Aumentamos el tamaño */
+  color: #00b894; /* Color base */
+  margin: 30px 0;
+  animation: bounce 1.5s infinite;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.arrow-down::after {
+  content: "⬇"; /* Flecha sólida */
+  display: inline-block;
+  font-weight: bold; /* Flecha más gruesa */
+}
+
+.arrow-down:hover {
+  transform: scale(1.5); /* Flecha más grande al hacer hover */
+  color: #0984e3; /* Color al hacer hover */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px); /* Movimiento de la flecha */
+  }
+}
+
+
+
+/* Efecto de parpadeo en el logo */
+.chatgpt-logo {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.chatgpt-logo:hover {
+  opacity: 0.7; /* Desvanecimiento suave */
+}
+/* Fondo animado */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(to bottom, #d4edda, #a8e6cf);
+  }
+  50% {
+    background: linear-gradient(to bottom, #a8e6cf, #f0e68c);
+  }
+  100% {
+    background: linear-gradient(to bottom, #d4edda, #a8e6cf);
+  }
+}
+
+body {
+  animation: backgroundAnimation 15s ease infinite;
+}
+
+/* MEDIA QUERIES para responsividad */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .feature h2 {
+    font-size: 1.3rem;
+  }
+
+  .feature p {
+    font-size: 0.95rem;
+  }
+
+  .code-preview {
+    font-size: 1rem;
+  }
+}
