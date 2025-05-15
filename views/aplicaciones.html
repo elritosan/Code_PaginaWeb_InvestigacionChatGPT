@@ -23,56 +23,195 @@
 
     <section class="features">
 
-      <div class="feature">
+      <div class="feature" data-index="1">
         <h2>1. Atención al cliente y soporte técnico</h2>
         <p>ChatGPT se usa para crear chatbots que responden automáticamente dudas frecuentes, ayudan a resolver problemas y ofrecen soporte inmediato, mejorando la experiencia del cliente y reduciendo la carga en los equipos humanos.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="2">
         <h2>2. Educación y aprendizaje</h2>
         <p>Se utiliza como tutor virtual para explicar temas, resolver ejercicios y acompañar en el aprendizaje personalizado, facilitando el acceso a ayuda educativa en cualquier momento y lugar.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="3">
         <h2>3. Generación de contenido</h2>
         <p>ChatGPT ayuda a redactar textos como artículos, blogs, correos y resúmenes, acelerando la producción de contenido y manteniendo calidad y coherencia en la comunicación.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="4">
         <h2>4. Desarrollo de software</h2>
         <p>Ofrece soporte a programadores con sugerencias de código, corrección de errores y generación de documentación, facilitando el proceso de desarrollo y aprendizaje en distintos lenguajes.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="5">
         <h2>5. Salud y bienestar</h2>
         <p>Proporciona información general sobre temas de salud, acompañamiento básico y consejos para hábitos saludables, sin reemplazar el diagnóstico profesional pero apoyando en orientación inicial.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="6">
         <h2>6. Automatización empresarial</h2>
         <p>Permite automatizar tareas repetitivas como respuestas, generación de informes y análisis textual, optimizando procesos internos y agilizando la toma de decisiones.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="7">
         <h2>7. Entretenimiento</h2>
         <p>Se emplea para crear narrativas interactivas, diálogos para juegos, composiciones creativas y experiencias personalizadas de ocio, haciendo más atractivos productos y servicios.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="8">
         <h2>8. Marketing y ventas</h2>
         <p>Ayuda a crear mensajes personalizados, scripts de venta y campañas, además de analizar opiniones de clientes para mejorar estrategias y aumentar el impacto comercial.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
-      <div class="feature">
+      <div class="feature" data-index="9">
         <h2>9. Traducción y comunicación multilingüe</h2>
         <p>Facilita la traducción de textos y la comunicación en varios idiomas, ayudando a superar barreras lingüísticas en entornos globalizados y mejorando la interacción internacional.</p>
+        <button class="btn-more-info">Más info</button>
       </div>
 
     </section>
   </div>
 
   <footer class="footer-custom">
-    <p>© 2025 - Aplicaciones de ChatGPT</p>
+    © 2025 - Aplicaciones de ChatGPT
   </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close" aria-label="Cerrar">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-image" src="" alt="" />
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
+    const modalImage = document.getElementById('modal-image');
+    const modalClose = document.getElementById('modal-close');
+
+    const moreInfoButtons = document.querySelectorAll('.btn-more-info');
+
+    const infoData = {
+      1: {
+        title: "Atención al cliente y soporte técnico",
+        text: `Los chatbots impulsados por ChatGPT están transformando la atención al cliente en múltiples industrias. Permiten respuestas instantáneas y precisas a preguntas frecuentes, procesamiento de solicitudes simples y encaminamiento inteligente hacia agentes humanos cuando se requieren casos complejos. Además, gracias a la comprensión contextual, pueden mantener conversaciones naturales que mejoran la experiencia del usuario y fomentan la fidelidad.<br><br>
+        Casos de uso: bancos que automatizan consultas sobre saldos y transacciones, compañías de telecomunicaciones que gestionan incidencias, tiendas en línea que brindan soporte postventa.<br><br>
+        Beneficios: reducción de costos operativos, mayor disponibilidad 24/7, disminución de tiempos de espera, mejora en la satisfacción y retención del cliente.`,
+        image: "../imgs/Aplicaciones/CHATBOTS.jpeg"
+      },
+
+      2: {
+        title: "Educación y aprendizaje",
+        text: `ChatGPT ofrece un entorno flexible para la educación personalizada. Puede actuar como tutor que adapta explicaciones y ejercicios al nivel del estudiante, favoreciendo la autodidaxia y el aprendizaje a ritmo propio. Además, genera materiales didácticos, fomenta la práctica mediante preguntas y respuestas, y facilita la enseñanza de idiomas con conversaciones naturales.<br><br>
+        Casos de uso: plataformas en línea, apoyo en asignaturas, formación corporativa.<br><br>
+        Beneficios: accesibilidad permanente, soporte individualizado, reducción de barreras geográficas o económicas.`,
+        image: "../imgs/Aplicaciones/educaci[on.jpeg" 
+      },
+
+      3: {
+        title: "Generación de contenido",
+        text: `La capacidad de ChatGPT para generar texto coherente y contextualizado permite acelerar procesos creativos y productivos en marketing, periodismo y creación literaria. Desde redactar artículos optimizados para SEO hasta resumir documentos extensos o generar ideas creativas, facilita el trabajo de profesionales y autónomos.<br><br>
+        Casos de uso: posts en redes, boletines, descripciones de productos.<br><br>
+        Beneficios: aumento en productividad, reducción de tiempos y costos.`,
+        image: "../imgs/Aplicaciones/contenido.jpeg"
+      },
+
+      4: {
+        title: "Desarrollo de software",
+        text: `ChatGPT actúa como asistente para desarrolladores, desde sugerir líneas de código hasta explicar conceptos y encontrar errores. Puede ser integrado en IDEs para ayuda en tiempo real o utilizado como herramienta para generar documentación técnica.<br><br>
+        Casos de uso: generación de funciones, depuración, integración en IDEs.<br><br>
+        Beneficios: acelera el desarrollo, reduce errores y mejora la colaboración.`,
+        image: "../imgs/Aplicaciones/sw.jpeg",
+      },  
+      5: {
+        title: "Salud y bienestar",
+        text: `Aunque no sustituye el diagnóstico médico, ChatGPT es una herramienta valiosa para brindar información accesible, educación en salud y apoyo emocional. Se usa en aplicaciones de coaching, recordatorios de medicación, promoción de hábitos saludables y primeros auxilios psicológicos, siempre con un enfoque ético y supervisado.<br><br>
+        Casos de uso: apps de salud mental, coaching emocional, seguimiento de tratamientos.<br><br>
+        Beneficios: mejora en adherencia a tratamientos y educación continua.`,
+        image: "../imgs/Aplicaciones/salud.jpeg"
+      },
+
+      6: {
+        title: "Automatización empresarial",
+        text: `ChatGPT permite automatizar procesos de negocio que involucran lenguaje natural, como generación y análisis de reportes, clasificación de documentos, atención a clientes y monitoreo de redes sociales. Al integrar NLP avanzado, ofrece insights estratégicos y mejora la eficiencia operativa.<br><br>
+        Casos de uso: gestión de tickets, análisis de sentimiento, reportes financieros.<br><br>
+        Beneficios: reducción de costos, rapidez en decisiones, mayor calidad en procesamiento.`,
+        image: "../imgs/Aplicaciones/empresas.jpeg"
+      },
+
+      7: {
+        title: "Entretenimiento",
+        text: `La IA de ChatGPT potencia experiencias inmersivas en videojuegos, narrativas interactivas y creación artística. Puede generar diálogos dinámicos, historias personalizadas y contenido creativo que enriquece la experiencia del usuario y fomenta la participación.<br><br>
+        Casos de uso: NPCs en videojuegos, guiones, asistentes creativos.<br><br>
+        Beneficios: mayor inmersión y contenido personalizado.`,
+        image: "../imgs/Aplicaciones/entretenimiento.jpeg"
+      },
+
+      8: {
+        title: "Marketing y ventas",
+        text: `ChatGPT genera contenido de marketing dirigido y personalizado, analiza opiniones y tendencias del mercado, y automatiza interacciones con clientes potenciales y existentes. Facilita la segmentación y optimización de campañas, apoyando en la fidelización y conversión.<br><br>
+        Casos de uso: chatbots de ventas, email marketing, encuestas.<br><br>
+        Beneficios: mayor efectividad y fidelización.`,
+        image: "../imgs/Aplicaciones/marketing.jpeg"
+      },
+
+      9: {
+        title: "Traducción y comunicación multilingüe",
+        text: `ChatGPT facilita la traducción precisa y contextualizada, así como la comunicación fluida en múltiples idiomas, superando barreras culturales y lingüísticas. Apoya la localización de productos y servicios para mercados globales y la colaboración internacional.<br><br>
+        Casos de uso: traducción documental, soporte multilingüe, localización.<br><br>
+        Beneficios: mejora en comunicación global y expansión de mercados.`,
+        image: "../imgs/Aplicaciones/traductor.jpeg"
+      }
+    };
+
+    moreInfoButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const index = btn.parentElement.getAttribute('data-index');
+        if(infoData[index]){
+          modalTitle.textContent = infoData[index].title;
+          modalText.innerHTML = infoData[index].text;  // usar innerHTML para respetar <br>
+          modalImage.src = infoData[index].image;
+          modalImage.alt = infoData[index].title;
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // evitar scroll fondo
+          modal.setAttribute('aria-hidden', 'false');
+        }
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      modal.setAttribute('aria-hidden', 'true');
+    });
+
+    window.addEventListener('click', e => {
+      if(e.target == modal){
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    window.addEventListener('keydown', e => {
+      if(e.key === "Escape" && modal.style.display === 'block'){
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
 </body>
 </html>
