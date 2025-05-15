@@ -13,33 +13,38 @@
     <button onclick="window.history.back()" class="btn-regresar">←</button>
 
     <header class="header">
-      <h1>Impacto académico de ChatGPT en estudiantes de la carrera de Software en la ESPOCH</h1>
+      <h1>Funcionamiento de Chat-GPT y su API </h1>
     </header>
 
     <img class="chatgpt-logo" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg"
       alt="Logo de ChatGPT">
 
+    <div class="feature special">
+      <div class="date-label"></div>
+      <h2>¿Cómo funciona ChatGPT desde la página web?</h2>
+
+      <p>ChatGPT, además de ofrecer su API para desarrolladores, también está disponible como una interfaz web amigable
+        en <a href="https://chat.openai.com" target="_blank">https://chat.openai.com</a>. Esta plataforma permite a
+        cualquier usuario interactuar directamente con el modelo de lenguaje sin necesidad de programar.</p>
+
+      <ul>
+        <li><strong>Interfaz conversacional:</strong> Permite chatear con la IA como si fuera una conversación común en
+          tiempo real.</li>
+        <li><strong>Acceso multiplataforma:</strong> Puedes usar ChatGPT desde navegadores en PC, tablets o smartphones.
+        </li>
+        <li><strong>Planes gratuitos y de pago:</strong> Ofrece un modelo gratuito con límites y planes de suscripción
+          como ChatGPT Plus, que permiten acceder a modelos avanzados como GPT-4o.</li>
+        <li><strong>Privacidad y seguridad:</strong> Las conversaciones pueden ser revisadas por OpenAI para mejorar el
+          servicio, pero no se utilizan para entrenar nuevos modelos a menos que el usuario lo permita.</li>
+        <li><strong>Acceso instantáneo:</strong> No requiere conocimientos técnicos, solo necesitas una cuenta de OpenAI
+          y podrás empezar a interactuar con la IA desde la web.</li>
+      </ul>
+
+    </div>
+
+
     <section class="features">
 
-      <div class="feature special">
-        <div class="date-label"></div>
-        <h2>Impacto de ChatGPT en la formación académica</h2>
-        <p>Tratará de reflexionar de como esta herramienta mejora la comprensión, redacción, y resolución de problemas
-          en estudiantes.</p>
-      </div>
-      <div class="arrow-down"></div>
-
-      <div class="feature">
-        <div class="date-label"></div>
-        <h2>Contribuciones al aprendizaje y desarrollo académico</h2>
-        <ul>
-          <li><strong>Interactividad y dinamismo:</strong> ChatGPT fomenta clases más interactivas, facilitando la
-            comprensión de conceptos complejos.</li>
-          <li><strong>Rendimiento académico:</strong> Mejora el aprendizaje de programación mediante asistencia
-            personalizada en tiempo real.</li>
-        </ul>
-      </div>
-      <div class="arrow-down"></div>
 
       <div class="feature">
         <div class="date-label"></div>
@@ -77,54 +82,218 @@
       </div>
       <div class="arrow-down"></div>
 
-      <div class="feature">
-        <div class="date-label"></div>
-        <h2>Retos y consideraciones éticas</h2>
-        <ul>
-          <li><strong>Alfabetización ética:</strong> Es necesario capacitar en el uso responsable de la IA.</li>
-          <li><strong>Complemento del docente:</strong> ChatGPT apoya, pero no reemplaza la figura del profesor.</li>
-        </ul>
-      </div>
-      <div class="arrow-down"></div>
+      
 
-      <div class="feature">
-        <div class="date-label"></div>
-        <h2>Interacción colaborativa con docentes</h2>
-        <ul>
-          <li><strong>Mejora en la planificación:</strong> Los docentes pueden usar ChatGPT para diseñar actividades más
-            personalizadas.</li>
-          <li><strong>Retroalimentación más eficaz:</strong> Facilita el análisis de respuestas de los estudiantes para
-            adaptar mejor las clases.</li>
-        </ul>
-      </div>
-      <div class="arrow-down"></div>
 
-      <div class="feature">
-        <div class="date-label"></div>
-        <h2>Proyección futura del uso de IA en la educación</h2>
-        <ul>
-          <li><strong>Entornos educativos inteligentes:</strong> La integración de ChatGPT con plataformas educativas
-            puede revolucionar el aprendizaje adaptativo.</li>
-          <li><strong>Desarrollo de habilidades del siglo XXI:</strong> Fomenta el pensamiento crítico, la resolución de
-            problemas y el aprendizaje continuo.</li>
-        </ul>
-      </div>
-      <div class="arrow-down"></div>
-
-      <div class="feature special">
-        <div class="date-label"></div>
-        <h2>Síntesis: Aplicabilidad en la carrera de Software de la ESPOCH</h2>
-        <ul>
-          <li>Facilita la comprensión teórica y práctica.</li>
-          <li>Mejora la resolución de problemas técnicos.</li>
-          <li>Fomenta el aprendizaje continuo y autónomo.</li>
-          <li>Apoya en proyectos y trabajos de integración curricular.</li>
-          <li>Prepara a los estudiantes para entornos digitales e inteligentes.</li>
-        </ul>
-      </div>
+      
 
     </section>
   </div>
+  <div class="arrow-down"></div>
+
+  <div class="div-contenedor">
+
+    <div class="feature">
+      <div class="date-label"></div>
+      <h2>¿Cómo funciona la API de OpenAI?</h2>
+  
+      <p>La API de OpenAI permite enviar mensajes a modelos de lenguaje como ChatGPT y recibir respuestas generadas. Este
+        proceso se realiza mediante solicitudes HTTP seguras utilizando tu propia clave API.</p>
+  
+      <ul>
+        <li><strong>Protocolo seguro:</strong> Solicitud <code>POST</code> al endpoint
+          <code>https://api.openai.com/v1/chat/completions</code>.
+        </li>
+        <li><strong>Clave API:</strong> Obligatoria en el encabezado como <code>Bearer TU_API_KEY</code>.</li>
+        <li><strong>Entrada JSON:</strong> Se estructura como un array de mensajes.</li>
+        <li><strong>Respuesta:</strong> Un JSON con el texto generado por la IA.</li>
+      </ul>
+  
+      <h3>1. Solicitud a la API usando fetch</h3>
+      <div class="code-preview">
+        <code>
+  const respuesta = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer TU_API_KEY_AQUÍ"
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: "¿Qué es ChatGPT?" }]
+    })
+  });
+      </code>
+      </div>
+  
+      <h3>2. Procesar la respuesta y guardar el texto en una variable</h3>
+      <div class="code-preview">
+        <code>
+  const data = await respuesta.json();
+  const respuestaIA = data.choices[0].message.content;
+  
+  // Ahora puedes usar la respuestaIA donde desees
+  console.log(respuestaIA);
+      </code>
+      </div>
+  
+      <h3>3. Llamar a la función y usar la respuesta donde quieras</h3>
+      <div class="code-preview">
+        <code>
+  async function obtenerRespuesta() {
+    // Código de solicitud y procesamiento aquí
+    ...
+    return respuestaIA;
+  }
+  
+  obtenerRespuesta().then(texto => {
+    console.log("La IA respondió:", texto);
+  });
+      </code>
+      </div>
+    </div>
+  
+  
+    <div class="arrow-down"></div>
+  
+    <div class="feature">
+      <div class="date-label"></div>
+      <h2>¿Qué son los tokens en OpenAI?</h2>
+  
+      <p>Los <strong>tokens</strong> son las unidades básicas que OpenAI utiliza para procesar texto. Cada palabra,
+        símbolo o carácter es dividido en fragmentos llamados tokens. El uso de la API se cobra en función de la cantidad
+        de tokens procesados (entrada + salida).</p>
+  
+      <ul>
+        <li><strong>Un token no es una palabra completa:</strong> Puede ser una palabra, parte de ella, o incluso un
+          símbolo.</li>
+        <li><strong>Promedio:</strong> 1 token ≈ 4 caracteres en inglés o ≈ 0.75 palabras.</li>
+        <li><strong>Cobro:</strong> Se calcula por la suma de los tokens enviados (prompt) + tokens generados (respuesta).
+        </li>
+        <li><strong>Modelos grandes consumen más tokens:</strong> Por lo que optimizar tus prompts reduce costos.</li>
+      </ul>
+  
+      <h3>Ejemplo práctico de conteo de tokens</h3>
+      <div class="code-preview">
+        <code>
+  Prompt: "Hola, ¿cómo estás?"
+  
+  Tokens aproximados: 5
+  
+  Respuesta: "Estoy bien, gracias. ¿En qué te ayudo hoy?"
+  
+  Tokens aproximados: 9
+  
+  Total tokens en esta conversación: 14
+      </code>
+      </div>
+      <h3>Consejo:</h3>
+      <div class="code-preview">
+        <code>
+  ✔ Es recomendable hacer prompts claros y concisos.
+  ✔ Recuerda que el sistema cobra por cada token, aunque sea solo el mensaje inicial.
+  ✔ Usa herramientas como tiktoken o plataformas online para calcular tus tokens antes de enviar la solicitud.
+      </code>
+      </div>
+    </div>
+  
+    <div class="arrow-down"></div>
+  
+    <div class="feature">
+      <div class="date-label"></div>
+      <h2>Tabla de costos por modelo (Actualizado mayo 2025)</h2>
+  
+      <table class="tabla-costos">
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Tokens de Entrada (Input)</th>
+            <th>Tokens de Salida (Output)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPT-4.1</td>
+            <td>$2.00 / 1M tokens</td>
+            <td>$8.00 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>GPT-4.1 mini</td>
+            <td>$0.40 / 1M tokens</td>
+            <td>$1.60 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>GPT-4.1 nano</td>
+            <td>$0.10 / 1M tokens</td>
+            <td>$0.40 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>GPT-4o</td>
+            <td>$5.00 / 1M tokens</td>
+            <td>$20.00 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>GPT-4o mini</td>
+            <td>$0.60 / 1M tokens</td>
+            <td>$2.40 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>GPT-4.5</td>
+            <td>$75.00 / 1M tokens</td>
+            <td>$150.00 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>GPT-3.5 Turbo</td>
+            <td>$0.50 / 1M tokens</td>
+            <td>$1.50 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>OpenAI o3</td>
+            <td>$10.00 / 1M tokens</td>
+            <td>$40.00 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>OpenAI o4-mini</td>
+            <td>$1.10 / 1M tokens</td>
+            <td>$4.40 / 1M tokens</td>
+          </tr>
+          <tr>
+            <td>OpenAI o1-pro</td>
+            <td>$150.00 / 1M tokens</td>
+            <td>$600.00 / 1M tokens</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <p> Los costos se calculan por tokens consumidos en entrada + salida, según el modelo.</p>
+    </div>
+  
+    <div class="arrow-down"></div>
+  
+    <div class="feature ">
+      <div class="date-label"></div>
+      <h2>Dashboard de uso de la API de OpenAI</h2>
+  
+      <p>OpenAI ofrece a sus usuarios una página oficial donde pueden visualizar el consumo de tokens, solicitudes y
+        gastos realizados en tiempo real. Este panel está disponible en <a href="https://platform.openai.com/usage"
+          target="_blank">https://platform.openai.com/usage</a>.</p>
+  
+      <ul>
+        <li><strong>Monitoreo en tiempo real:</strong> Permite ver el uso detallado por día, modelo y tipo de solicitud.
+        </li>
+        <li><strong>Control de gastos:</strong> Visualiza cuánto dinero has consumido y la cantidad de tokens gastados.
+        </li>
+        <li><strong>Requiere saldo disponible:</strong> Para poder usar la API, es necesario tener saldo cargado en tu
+          cuenta de OpenAI, ya sea mediante suscripción o pago por uso.</li>
+      </ul>
+  
+      <img src="../imgs/UsoApiChatGpt.png" alt="Dashboard de OpenAI - Uso de API"
+        style="width: 50%; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+    </div>
+  </div>
+
+
+
 
 
   <footer class="footer-custom">
