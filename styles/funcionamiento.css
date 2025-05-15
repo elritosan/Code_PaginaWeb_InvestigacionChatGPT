@@ -68,6 +68,12 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+.div-contenedor{
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
 .feature:hover {
   transform: translateY(-10px);
 }
@@ -105,7 +111,7 @@ code {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color:  #28a745; /* Verde fuerte */
+  background-color:  #28a745; 
   color: #fff;
   border: none;
   padding: 10px 16px;
@@ -126,9 +132,10 @@ code {
 
 /* FOOTER */
 .footer-custom {
-  background-color: #28a745; /* Verde tipo Bootstrap */
+  background-color: #28a745; 
   color: white;
   padding: 20px 150px;
+  margin-top: -30px;
   text-align: center;
   font-size: 1rem;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
@@ -143,7 +150,7 @@ code {
 }
 
 .feature h2:hover {
-  color: green; /* Color vibrante de hover */
+  color: green; 
 }
 
 /* Animación de aparición de las funcionalidades */
@@ -175,13 +182,13 @@ code {
 .feature:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  opacity: 0.9; /* Desvanecimiento suave */
+  opacity: 0.9; 
 }
 
 .arrow-down {
   text-align: center;
-  font-size: 5rem; /* Aumentamos el tamaño */
-  color: #00b894; /* Color base */
+  font-size: 5rem; 
+  color: #00b894; 
   margin: 30px 0;
   animation: bounce 1.5s infinite;
   transition: transform 0.3s, color 0.3s;
@@ -189,14 +196,14 @@ code {
 }
 
 .arrow-down::after {
-  content: "⬇"; /* Flecha sólida */
+  content: "⬇"; 
   display: inline-block;
-  font-weight: bold; /* Flecha más gruesa */
+  font-weight: bold; 
 }
 
 .arrow-down:hover {
-  transform: scale(1.5); /* Flecha más grande al hacer hover */
-  color: #0984e3; /* Color al hacer hover */
+  transform: scale(1.5); 
+  color: #0984e3; 
 }
 
 @keyframes bounce {
@@ -204,7 +211,7 @@ code {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(15px); /* Movimiento de la flecha */
+    transform: translateY(15px); 
   }
 }
 
@@ -253,3 +260,60 @@ body {
     font-size: 1rem;
   }
 }
+
+.feature ul {
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.feature p {
+  margin: 20px 0;
+}
+
+.feature h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #28a745;
+}
+
+
+.tabla-costos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-costos th,
+.tabla-costos td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.tabla-costos th {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+}
+
+.tabla-costos tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-costos tr:hover {
+  background-color: #e0ffe0;
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature img:hover {
+  transform: scale(1.02);
+}
+
