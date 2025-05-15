@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Qué es ChatGPT?</title>
   <link rel="stylesheet" href="../styles/que_es_chatgpt.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-
   <div class="container">
     <button onclick="window.history.back()" class="btn-regresar">←</button>
 
@@ -17,96 +18,153 @@
       <h1>ChatGPT</h1>
     </header>
 
-    <img class="chatgpt-logo" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg" alt="Logo de ChatGPT">
+    <img class="chatgpt-logo" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg"
+      alt="Logo de ChatGPT">
 
     <section class="features">
-
+      <!-- Títulos con data-bs-toggle -->
       <div class="feature">
-        <h2>¿Qué es ChatGPT?</h2>
-        <div class="code-preview">
-          <pre><code>
-<ul>ChatGPT es un modelo de inteligencia artificial desarrollado por OpenAI que está diseñado para mantener conversaciones con personas de forma natural y útil. El nombre "GPT" significa Generative Pre-trained Transformer, que en español sería algo como:
-"Transformador Generativo Preentrenado"</ul> 
-          </code></pre>
-        </div>
+        <h2 class="text-primary" data-bs-toggle="modal" data-bs-target="#modalQueEs">¿Qué es ChatGPT?</h2>
       </div>
 
       <div class="feature">
-        <h2>¿Quién creó ChatGPT?</h2>
-        <div class="code-preview">
-          <pre><code>
-<ul>ChatGPT fue creado por OpenAI, una empresa de investigación en inteligencia artificial con sede en San Francisco, Estados Unidos. OpenAI fue fundada en diciembre de 2015 por Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman y Wojciech Zaremba, entre otros. Su misión es asegurar que la inteligencia artificial beneficie a toda la humanidad.</ul>
-          </code></pre>
-        </div>
+        <h2 class="text-success" data-bs-toggle="modal" data-bs-target="#modalSignificadoGPT">¿Qué significa GPT?</h2>
       </div>
 
       <div class="feature">
-        <h2>Historia de ChatGPT</h2>
-        <div class="code-preview">
-          <pre><code>
-<ul>La evolución de ChatGPT se dio en varias etapas:</ul>
-<ul>
-  <li><strong>2018:</strong> Se lanza el primer modelo GPT (Generative Pre-trained Transformer), marcando un nuevo enfoque para procesar lenguaje natural.</li>
-  <li><strong>2019:</strong> Se presenta GPT-2, con más parámetros y capacidad de generación de texto más coherente.</li>
-  <li><strong>2020:</strong> Llega GPT-3, con 175 mil millones de parámetros, revolucionando la forma de interactuar con IA.</li>
-  <li><strong>2022:</strong> OpenAI lanza ChatGPT, basado en GPT-3.5, con una interfaz conversacional.</li>
-  <li><strong>2023:</strong> Se lanza GPT-4 y más adelante GPT-4o, con capacidades multimodales.</li>
-</ul>
-          </code></pre>
-        </div>
+        <h2 class="text-info" data-bs-toggle="modal" data-bs-target="#modalCreadores">¿Quién creó ChatGPT?</h2>
       </div>
 
       <div class="feature">
-        <h2>¿Para qué sirve ChatGPT?</h2>
-        <p>ChatGPT puede ayudarte en muchas tareas, como por ejemplo:</p>
-        <div class="code-preview">
-          <pre><code>
-<ul>
-  <li>Responder preguntas sobre casi cualquier tema (ciencia, historia, tecnología, etc.).</li>
-  <li>Redactar textos, correos, ensayos o resúmenes.</li>
-  <li>Traducir idiomas.</li>
-  <li>Explicar conceptos difíciles.</li>
-  <li>Escribir código y ayudarte a resolver errores de programación.</li>
-  <li>Crear ideas creativas (cuentos, poemas, nombres de negocios, etc.).</li>
-  <li>Brindar apoyo en tareas escolares o universitarias.</li>
-  <li>Simular conversaciones, juegos de rol o entrevistas.</li>
-</ul>
-          </code></pre>
-        </div>
+        <h2 class="text-warning" data-bs-toggle="modal" data-bs-target="#modalHistoria">Historia de ChatGPT</h2>
       </div>
 
       <div class="feature">
-        <h2>Versiones</h2>
-        <p>Hay varias versiones de ChatGPT.</p>
-        <div class="code-preview">
-          <pre><code>
-<ul>Algunas son más avanzadas que otras, como:</ul>
-<ul>según el plan. </ul>
-
-<h1 style="color: white;">GPT-3.5 (2022)</h1>
-<h1 style="color: white;">GPT-4 (marzo 2023)</h1>
-<h1 style="color: white;">GPT-4o (mayo 2024)</h1>
-<h1 style="color: white;">GPT-4.5 (febrero 2025)</h1>
-<h1 style="color: white;">GPT-4.1 (abril 2025)</h1>
-
-<h1 style="color: white;">Planes de suscripción</h1>
-<h3 style="color: white;">
-  <strong>Gratis:</strong> Acceso a GPT-4o con ciertas limitaciones.<br>
-  <strong>ChatGPT Plus ($20/mes):</strong> Acceso ampliado a GPT-4o y prioridad de funciones.<br>
-  <strong>ChatGPT Pro:</strong> Acceso a modelos avanzados como GPT-4.1 y versiones profesionales de la serie “o”.
-</h3>
-
-<ul>Cuanto más avanzada, mejores son sus respuestas y capacidades.</ul>
-          </code></pre>
-        </div>
+        <h2 class="text-danger" data-bs-toggle="modal" data-bs-target="#modalUtilidad">¿Para qué sirve ChatGPT?</h2>
       </div>
 
+      <div class="feature">
+        <h2 class="text-secondary" data-bs-toggle="modal" data-bs-target="#modalVersiones">Versiones y Planes</h2>
+      </div>
     </section>
   </div>
-  <br>
+
+  <!-- Modales -->
+  <div class="modal fade" id="modalQueEs" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">¿Qué es ChatGPT?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>ChatGPT es un modelo de inteligencia artificial desarrollado por OpenAI que está diseñado para mantener
+            conversaciones con personas de forma natural y útil. El nombre "GPT" significa Generative Pre-trained
+            Transformer, que en español sería "Transformador Generativo Preentrenado".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalSignificadoGPT" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">¿Qué significa GPT?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>GPT significa "Generative Pre-trained Transformer". Es un tipo de modelo de lenguaje que aprende a generar
+            texto coherente después de haber sido entrenado con grandes cantidades de datos de texto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalCreadores" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white">
+          <h5 class="modal-title">¿Quién creó ChatGPT?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Fue creado por OpenAI, una empresa de investigación en IA fundada por Elon Musk, Sam Altman y otros. Su
+            misión es asegurar que la IA beneficie a toda la humanidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalHistoria" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Historia de ChatGPT</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><strong>2018:</strong> GPT</li>
+            <li><strong>2019:</strong> GPT-2</li>
+            <li><strong>2020:</strong> GPT-3</li>
+            <li><strong>2022:</strong> ChatGPT basado en GPT-3.5</li>
+            <li><strong>2023:</strong> GPT-4</li>
+            <li><strong>2024:</strong> GPT-4o</li>
+            <li><strong>2025:</strong> GPT-4.5 / GPT-4.1</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalUtilidad" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">¿Para qué sirve ChatGPT?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Responder preguntas</li>
+            <li>Redactar textos</li>
+            <li>Traducir idiomas</li>
+            <li>Explicar conceptos</li>
+            <li>Escribir código</li>
+            <li>Apoyar en tareas escolares</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalVersiones" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-secondary text-white">
+          <h5 class="modal-title">Versiones y planes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>GPT-3.5</li>
+            <li>GPT-4</li>
+            <li>GPT-4o</li>
+            <li>GPT-4.5</li>
+            <li>GPT-4.1</li>
+          </ul>
+          <p><strong>Gratis:</strong> acceso limitado a GPT-4o</p>
+          <p><strong>Plus:</strong> GPT-4o mejorado por $20/mes</p>
+          <p><strong>Pro:</strong> acceso completo a GPT-4.1</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer-custom">
     <p>© 2025 - Investigación sobre ChatGPT</p>
   </footer>
 </body>
+
 </html>
