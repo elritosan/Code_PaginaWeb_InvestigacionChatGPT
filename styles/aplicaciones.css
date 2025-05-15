@@ -190,7 +190,7 @@ body {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: rgba(242, 242, 242, 0.95);
   margin: 60px auto;
   padding: 20px;
   border-radius: 15px;
@@ -257,5 +257,5 @@ body {
   display: block;
   margin: 0 0 15px 0;
   border-radius: 8px;
-  object-fit: contain; /* Ajusta la imagen sin deformarla */
+  object-fit: contain; 
 }
